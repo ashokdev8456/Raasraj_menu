@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Cart - RASRAAJ Indian Cafe</title>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --primary: #b22222;
+      --primary-dark: #8b1a1a;
+      --light: #fffaf0;
+      --dark: #222;
+      --gray: #555;
+      --shadow: 0 8px 25px rgba(0,0,0,0.08);
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      background: var(--light);
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 100px 20px 60px;
+    }
+
+    h1 {
+      font-family: 'Playfair Display', serif;
+      color: var(--primary);
+      text-align: center;
+      margin-bottom: 40px;
+      font-size: 3rem;
+    }
+
+    .cart-empty {
+      text-align: center;
+      padding: 80px 20px;
+      font-size: 1.3rem;
+      color: var(--gray);
+    }
+
+    .cart-empty a {
+      color: var(--primary);
+      font-weight: 600;
+      text-decoration: underline;
+    }
+
+    .cart-table {
+      width: 100%;
+      border-collapse: collapse;
+      background: white;
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: var(--shadow);  
+      margin-bottom: 40px;
+    }
+
+    .cart-table th, .cart-table td {
+      padding: 18px 20px;
+      text-align: left;
+      border-bottom: 1px solid #eee;
+    }
+
+    .cart-table th {
+      background: var(--primary);
+      color: white;
+      font-weight: 600;
+    }
+
+    .cart-item-name {
+      font-weight: 600;
+      color: var(--dark);
+    }
+
+    .cart-item-price {
+      color: var(--primary);
+      font-weight: 700;
+    }
+
+    .quantity-control-cart {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .quantity-btn-cart {
+      width: 36px;
+      height: 36px;
+      border: 1px solid #ccc;
+      border-radius: 50%;
+      background: white;
+      font-size: 1.2rem;
+      cursor: pointer;
+    }
+
+    .quantity-btn-cart:hover {
+      background: #f8f8f8;
+    }
+
+    .quantity-cart {
+      width: 60px;
+      text-align: center;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      padding: 8px;
+    }
+
+    .remove-btn {
+      color: #d32f2f;
+      background: none;
+      border: none;
+      font-size: 1.2rem;
+      cursor: pointer;
+    }
+
+    .totals {
+      background: white;
+      border-radius: 16px;
+      padding: 28px;
+      box-shadow: var(--shadow);
+      max-width: 420px;
+      margin-left: auto;
+    } 
+
+    .totals h3 {
+      margin: 0 0 20px;
+      font-size: 1.4rem;
+      color: var(--dark);
+    }
+
+    .total-line {
+      display: flex ;
+      justify-content: space-between ;
+      margin: 12px 0 ;
+      font-size: 1.1rem ;
+    }
+
+    .grand-total { 
+      font-size: 1.4rem;
+      font-weight: 700;
+      color: var(--primary);
+      border-top: 1px solid #eee;
+      padding-top: 16px;
+      margin-top: 12px;
+    }
+
+    .checkout-btn {
+      display: block;
+      width: 100%;
+      background: var(--primary);
+      color: white;
+      border: none;
+      padding: 16px;
+      border-radius: 50px;
+      font-size: 1.15rem;
+      font-weight: 600;
+      cursor: pointer;
+      margin-top: 24px;
+      transition: all 0.25s;
+    }
+
+    .checkout-btn:hover {
+      background: var(--primary-dark);
+      transform: translateY(-2px);
+    }
+
+    .back-to-menu {
+      display: inline-block;
+      margin-top: 20px;
+      color: var(--primary);
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    /* ── New: Pickup / Delivery Toggle ── */
+    .order-type {
+      background: white;
+      border-radius: 16px;
+      padding: 24px;
+      box-shadow: var(--shadow);
+      margin-bottom: 32px;
+      max-width: 420px;
+      margin-left: auto;
+    }
+
+    .order-type h3 {
+      margin: 0 0 16px;
+      font-size: 1.3rem;
+      color: var(--dark);
+    }
+
+    .order-options {
+      display: flex;
+      gap: 24px;
+      margin-bottom: 16px;
+    }
+
+    .order-option {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      cursor: pointer;
+      font-weight: 500;
+    }
+
+    .order-option input[type="radio"] {
+      width: 18px;
+      height: 18px;
+      accent-color: var(--primary);
+    }
+
+    .delivery-note {
+      display: none;
+      margin-top: 16px;
+      padding: 12px;
+      background: #fff8f8;
+      border: 1px solid #ffebee;
+      border-radius: 8px;
+      font-size: 0.95rem;
+      color: #c62828;
+    }
+
+    .delivery-note.show {
+      display: block;
+    }
+
+    @media (max-width: 768px) {
+      .container { padding: 80px 16px 40px; }
+      h1 { font-size: 2.4rem; }
+      .cart-table thead { display: none; }
+      .cart-table tr {
+        display: block;
+        margin-bottom: 20px;
+        border: 1px solid #eee;
+        border-radius: 12px;
+        padding: 16px;
+      }
+      .cart-table td {
+        display: flex;
+        justify-content: space-between;
+        border: none;
+        padding: 10px 0;
+      }
+      .cart-table td::before {
+        content: attr(data-label);
+        font-weight: 600;
+        color: var(--dark);
+      }
+      .totals, .order-type { max-width: 100%; }
+      .order-options { flex-direction: column; gap: 12px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Simple Navbar -->
+  <nav style="background:#fff; padding:16px 20px; box-shadow:0 2px 10px rgba(0,0,0,0.1);">
+    <div style="max-width:1200px; margin:0 auto; display:flex; justify-content:space-between; align-items:center;">
+      <a href="menu.html" style="font-family:'Playfair Display',serif; color:var(--primary); font-size:1.8rem; text-decoration:none;">Rasraaj</a>
+      <a href="menu.html" style="color:var(--primary); font-weight:500;">Back to Menu</a>
+    </div>
+  </nav>
+
+  <div class="container">
+    <h1>Your Cart</h1>
+
+    <div id="cartEmpty" class="cart-empty" style="display:none;">
+      <p>Your cart is empty.</p>
+      <a href="menu.html">Browse Menu →</a>
+    </div>
+
+    <table class="cart-table" id="cartTable">
+      <thead>
+        <tr>
+          <th>Item</th>
+          <th>Price</th>
+          <th>Quantity</th>
+          <th>Subtotal</th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody id="cartItems"></tbody>
+    </table>
+
+    <!-- New: Order Type Selection -->
+    <div class="order-type" id="orderTypeSection" style="display:none;">
+      <h3>How would you like to receive your order?</h3>
+      <div class="order-options">
+        <label class="order-option">
+          <input type="radio" name="orderType" value="pickup" checked onchange="updateOrderType()">
+          Pickup (at restaurant)
+        </label>
+        <label class="order-option">
+          <input type="radio" name="orderType" value="delivery" onchange="updateOrderType()">
+          Delivery
+        </label>
+      </div>
+      <div class="delivery-note" id="deliveryNote">
+        Delivery available in select areas only. Minimum order may apply. Address details required at checkout.
+      </div>
+    </div>
+
+    <div class="totals" id="cartTotals" style="display:none;">
+      <h3>Order Summary</h3>
+      <div class="total-line">
+        <span>Subtotal</span>
+        <span id="subtotal">$0.00</span>
+      </div>
+      <div class="total-line" id="deliveryLine">
+        <span>Delivery / Service Fee</span>
+        <span id="deliveryFee">To be calculated</span>
+      </div>
+      <div class="grand-total">
+        <span>Total</span>
+        <span id="grandTotal">$0.00</span>
+      </div>
+      <button class="checkout-btn" onclick="goToCheckout()">Proceed to Checkout</button>
+    </div>
+
+    <a href="menu.html" class="back-to-menu">← Continue Shopping</a>
+  </div>
+
+  <script>
+    const cart = JSON.parse(localStorage.getItem('cart')) || [];
+    const cartItemsEl = document.getElementById('cartItems');
+    const cartEmptyEl = document.getElementById('cartEmpty');
+    const cartTotalsEl = document.getElementById('cartTotals');
+    const orderTypeSection = document.getElementById('orderTypeSection');
+    const subtotalEl = document.getElementById('subtotal');
+    const grandTotalEl = document.getElementById('grandTotal');
+    const deliveryLine = document.getElementById('deliveryLine');
+    const deliveryFeeEl = document.getElementById('deliveryFee');
+    const deliveryNote = document.getElementById('deliveryNote');
+
+    let currentOrderType = 'pickup'; // default
+
+    function renderCart() {
+      cartItemsEl.innerHTML = '';
+
+      if (cart.length === 0) {
+        cartEmptyEl.style.display = 'block';
+        cartTotalsEl.style.display = 'none';
+        orderTypeSection.style.display = 'none';
+        return;
+      }
+
+      cartEmptyEl.style.display = 'none';
+      cartTotalsEl.style.display = 'block';
+      orderTypeSection.style.display = 'block';
+
+      let subtotal = 0;
+
+      cart.forEach((item, index) => {
+        const row = document.createElement('tr');
+        const itemTotal = item.price * item.quantity;
+        subtotal += itemTotal;
+
+        row.innerHTML = `
+          <td data-label="Item" class="cart-item-name">${item.name}</td>
+          <td data-label="Price" class="cart-item-price">$${item.price.toFixed(2)}</td>
+          <td data-label="Quantity">
+            <div class="quantity-control-cart">
+              <button class="quantity-btn-cart" onclick="updateQty(${index}, -1)">-</button>
+              <input type="number" class="quantity-cart" value="${item.quantity}" min="1" readonly>
+              <button class="quantity-btn-cart" onclick="updateQty(${index}, 1)">+</button>
+            </div>
+          </td>
+          <td data-label="Subtotal">$${itemTotal.toFixed(2)}</td>
+          <td data-label="Remove">
+            <button class="remove-btn" onclick="removeItem(${index})"><i class="fas fa-trash-alt"></i></button>
+          </td>
+        `;
+        cartItemsEl.appendChild(row);
+      });
+
+      subtotalEl.textContent = `$${subtotal.toFixed(2)}`;
+      updateOrderType(); // refresh fee display
+    }
+
+    function updateQty(index, change) {
+      if (cart[index].quantity + change >= 1) {
+        cart[index].quantity += change;
+        localStorage.setItem('cart', JSON.stringify(cart));
+        renderCart();
+      }
+    }
+
+    function removeItem(index) {
+      cart.splice(index, 1);
+      localStorage.setItem('cart', JSON.stringify(cart));
+      renderCart();
+    }
+
+    function updateOrderType() {
+      const selected = document.querySelector('input[name="orderType"]:checked').value;
+      currentOrderType = selected;
+
+      if (selected === 'delivery') {
+        deliveryNote.classList.add('show');
+        deliveryFeeEl.textContent = 'To be calculated at checkout';
+        deliveryLine.style.display = 'flex';
+      } else {
+        deliveryNote.classList.remove('show');
+        deliveryFeeEl.textContent = 'Free (Pickup)';
+        deliveryLine.style.display = 'flex'; // or 'none' if you prefer to hide
+      }
+
+      // You can also recalculate grand total here later if you add real fees
+        const subtotal = parseFloat(subtotalEl.textContent.replace('$', '')) || 0;
+      grandTotalEl.textContent = `$${subtotal.toFixed(2)}`; // placeholder — update with real fee logic
+    }
+
+    function goToCheckout() {
+      if (cart.length > 0) {
+        // Optional: save order type to localStorage so checkout.html can read it
+        localStorage.setItem('orderType', currentOrderType);
+        window.location.href = 'checkout.html';
+      }
+    }
+
+    renderCart();
+  </script>
+</body>
+</html>
