@@ -10,7 +10,7 @@ const menuItems = [
     { name: "Tandoori Chaap", price: 16.99, category: "appetizers", img: "assets/tandoori-chaap.jpg" },
     { name: "Tandoori Paneer Tikka", price: 16.99, category: "appetizers", img: "assets/tandoori-paneer.jpg" },
     { name: "Spinach Cheese Corn Rolls", price: 16.99, category: "appetizers", img: "assets/spinach-rolls.jpg" },
-    { name: "Chatori Sampler   (Paneer + Chaap)", price: 19.99, category: "appetizers", img: "assets/chatri.jpeg" },
+    { name: "Chatori Sampler   (Paneer+Chaap)", price: 19.99, category: "appetizers", img: "assets/chatri.jpeg" },
 
     /* CHAAT */
     { name: "Samosa Chana Chaat", price: 9.99, category: "chaat", img: "assets/samosa-chaat.jpg" },
