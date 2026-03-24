@@ -27,7 +27,7 @@ const menuItems = [
     /* SIDE ORDERS */
     { name: "Raita", price: 4.99, category: "sides", img: "assets/raita.jpg" },
     { name: "Garden Salad", price: 5.99, category: "sides", img: "assets/salad.jpg" },
-    { name: "Onion Pickle", price: 3.99, category: "sides", img: "assets/pickle.jpg" },
+    { name: "Onion Pickle", price: 3.99, category: "sides", img: "assets/onion_pic.jpg" },
     { name: "Extra Bhatura", price: 4.99, category: "sides", img: "assets/bathura.jpeg" },
     { name: "Butter", price: 2.99, category: "sides", img: "assets/butter.jpg" },
     { name: "Extra Puri (2)", price: 3.99, category: "sides", img: "assets/puri.jpeg" },
