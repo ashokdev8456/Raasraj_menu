@@ -10,7 +10,7 @@ const menuItems = [
     { name: "Tandoori Chaap", price: 16.99, category: "appetizers", img: "assets/tandoori-chaap.jpg" },
     { name: "Tandoori Paneer Tikka", price: 16.99, category: "appetizers", img: "assets/tandoori-paneer.jpg" },
     { name: "Spinach Cheese Corn Rolls", price: 16.99, category: "appetizers", img: "assets/spinach-rolls.jpg" },
-    { name: "Chatori Sampler   (Paneer+Chaap)", price: 19.99, category: "appetizers", img: "assets/chatri.jpeg" },
+    { name: "Chatori Sampler (Paneer + Chaap)", price: 19.99, category: "appetizers", img: "assets/chatri.jpeg" },
 
     /* CHAAT */
     { name: "Samosa Chana Chaat", price: 9.99, category: "chaat", img: "assets/samosa-chaat.jpg" },
@@ -21,13 +21,13 @@ const menuItems = [
     { name: "Dahi Bhalla Chaat", price: 10.99, category: "chaat", img: "assets/dahi-bhalla.jpg" },
     { name: "Chaat Platter (Sev Puri / bhella / Pineapple bhelpuri)", price: 18.99, category: "chaat", img: "assets/chaat-platter.jpg" },
     { name: "Pani Puri", price: 8.99, category: "chaat", img: "assets/pani-puri.jpg" },
-    { name: "Ruby's Special Chole Bhature (Serve with Aloo chatrey + Salad)", price: 15.99, category: "chaat", img: "assets/ruby.jpeg" },
+    { name: "Ruby's Special Chole Bhature (Serve with flavoured alu, sweet and sour chutney and onions)", price: 15.99, category: "chaat", img: "assets/ruby.jpeg" },
     { name: "Aloo Puri Chole", price: 13.99, category: "chaat", img: "assets/aloo-puri.jpg" },
 
     /* SIDE ORDERS */
     { name: "Raita", price: 4.99, category: "sides", img: "assets/raita.jpg" },
     { name: "Garden Salad", price: 5.99, category: "sides", img: "assets/salad.jpg" },
-    { name: "Onion Pickle", price: 3.99, category: "sides", img: "assets/onion_pic.jpg" },
+    { name: "Pickled onions", price: 3.99, category: "sides", img: "assets/pickle.jpg" },
     { name: "Extra Bhatura", price: 4.99, category: "sides", img: "assets/bathura.jpeg" },
     { name: "Butter", price: 2.99, category: "sides", img: "assets/butter.jpg" },
     { name: "Extra Puri (2)", price: 3.99, category: "sides", img: "assets/puri.jpeg" },
@@ -53,15 +53,15 @@ const menuItems = [
     { name: "Garlic Naan", price: 4.99, category: "breads", img: "assets/garlic-naan.jpg" },
     { name: "Onion Chilli Naan", price: 4.99, category: "breads", img: "assets/onion-naan.jpg" },
     { name: "Garlic Cheese Naan", price: 5.99, category: "breads", img: "assets/cheese-naan.jpg" },
-    { name: "Plain Paratha", price: 3.99, category: "breads", img: "assets/paratha.jpg" },
+    { name: "Plain Parantha", price: 3.99, category: "breads", img: "assets/paratha.jpg" },
     { name: "Tandoori Roti", price: 2.99, category: "breads", img: "assets/tandoori-roti.jpg" },
 
     /* TAWA PARATHA */
     { name: "Aloo Onion Parantha", price: 9.99, category: "breads", img: "assets/aloo_parathas.jpeg" },
-    { name: "Gobhi Paratha", price: 9.99, category: "breads", img: "assets/gobhi-paratha.jpg" },
+    { name: "Gobhi Parantha", price: 9.99, category: "breads", img: "assets/gobhi-paratha.jpg" },
     { name: "Paneer Pyaz Parantha", price: 10.99, category: "breads", img: "assets/paneer-parathas.jpeg" },
     { name: "Mix Veg Parantha", price: 10.99, category: "breads", img: "assets/mix-paratha.jpg" },
-    { name: "Hariyali Paneer Parantha", price: 11.99, category: "breads", img: "assets/hariyali_parathas.jpeg" },
+    { name: "HARIYALI Paneer Paranthas (2pcs)", price: 11.99, category: "breads", img: "assets/hariyali_parathas.jpeg" },
     { name: "Hariyali Cheese Parantha", price: 11.99, category: "breads", img: "assets/hariyali_cheese_parantha.jpg" },
     { name: "Garlic Cheese Chilli Parantha", price: 10.99, category: "breads", img: "assets/garlic-paratha.jpg" },
     { name: "Whole Wheat Roti (2pcs)", price: 2.50, category: "breads", img: "assets/wheat-roti.jpg" },
@@ -117,37 +117,29 @@ const menuItems = [
 
 ];
 
-/* ── COMBO OFFERS (separate structure for special rendering) ── */
+/* ── COMBO OFFERS ── */
 const comboOffers = {
     dailySpecial: [
-         {
+        {
             name: "Parantha Thali",
-            price: 16.99,
+            price: 18.99,
             availability: "Weekdays & Weekend — Dine-In & To-Go",
-            includes: "Choice of Parantha · Sabzi · Dal · Raita · Pickle",
+            includes: "parantha(2pcs), Dal/sabzi of the day, pickle, Home Made Butter, Raita, Desert",
             img: "assets/parantha_thali.jpg"
         },
         {
             name: "Regular Thali",
             price: 15.99,
             availability: "Mon–Thu Dine-In | Fri–Sun To-Go (Online Only)",
-            includes: "Dal, Dry Sabzi, Raita, Rice, 2 Rotis, Papadam",
+            includes: "Dal, Dry Sabzi, Raita, Rice, Rotis(2pcs), Papadam",
             img: "assets/regular_thali.jpg"
         },
         {
             name: "Paneer Thali",
             price: 18.99,
             availability: "Mon–Thu Dine-In | Fri–Sun To-Go (Online Only)",
-            includes: "Dal, Sabzi, Paneer Curry, Rice, Dessert, Raita, 2 Rotis, Papadam",
+            includes: "Dal, Sabzi, Paneer Curry, Rice, Dessert, Raita, Rotis(2pcs), Papadam",
             img: "assets/paneer_thali.jpg"
-        },
-       
-        {
-            name: "Rasraaj Thali",
-            price: 17.99,
-            availability: "Mon–Thu Dine-In | Fri–Sun To-Go",
-            includes: "Chef's Special Curry · Dal · Rice · Roti · Raita · Dessert · Papadam",
-            img: "assets/rasraaj_thali.jpg"
         },
         {
             name: "Rice & Dal Bowl",
@@ -168,9 +160,16 @@ const comboOffers = {
         {
             name: "Weekend Unlimited Thali",
             price: 24.99,
-            availability: "Friday, Saturday & Sunday — Dine-In Only",
-            includes: "Unlimited Dal · Sabzi · Paneer Curry · Rice · Roti · Raita · Dessert · Papadam · Pickle",
-            img: "assets/weekend_unlimited_thali.jpg"
+            availability: "Mon–Thu --- Dine-In Only",
+            includes: " Dal · Sabzi · Paneer Curry · Rice · Roti · Raita · Dessert · Papadam · Pickle",
+            img: "assets/unlimited_thali.jpg"
+        },
+        {
+            name: "Weekend Thali",
+            price: 21.99,
+            availability: "Fri-Sun --- To-Go (Online Only)",
+            includes: "Dal · Sabzi · Paneer Curry · Rice · Roti · Raita · Dessert · Papadam · Pickle",
+            img: "assets/unlimited_thali.jpg"
         },
     ]
 };
