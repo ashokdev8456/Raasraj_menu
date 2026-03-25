@@ -1,14 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Menu - RASRAAJ Indian Cafe</title>
 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Inter:wght@300;400;500;600&display=swap"
+    rel="stylesheet">
 
   <link rel="stylesheet" href="style.css" />
 
@@ -19,12 +22,15 @@
       --light: #fffaf0;
       --dark: #222;
       --gray: #555;
-      --shadow: 0 8px 25px rgba(0,0,0,0.08);
+      --shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
       --gold: #c8922a;
       --gold-light: #f5e6c8;
     }
 
-    body { margin: 0; font-family: 'Inter', sans-serif; }
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+    }
 
     .menu-page {
       padding: 110px 20px 100px;
@@ -64,7 +70,8 @@
       transition: all 0.28s ease;
     }
 
-    .filter-btn:hover, .filter-btn.active {
+    .filter-btn:hover,
+    .filter-btn.active {
       background: var(--primary);
       color: white;
       transform: translateY(-2px);
@@ -98,7 +105,7 @@
 
     .menu-card:hover {
       transform: translateY(-12px);
-      box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
     }
 
     /* ── LARGER IMAGES ── */
@@ -142,7 +149,8 @@
     }
 
     .quantity-btn {
-      width: 42px; height: 42px;
+      width: 42px;
+      height: 42px;
       border: 1px solid #ddd;
       border-radius: 50%;
       background: white;
@@ -151,7 +159,9 @@
       transition: 0.2s;
     }
 
-    .quantity-btn:hover { background: #f8f8f8; }
+    .quantity-btn:hover {
+      background: #f8f8f8;
+    }
 
     .quantity {
       width: 70px;
@@ -218,7 +228,7 @@
       border: 2px solid var(--gold);
       border-radius: 50px;
       background: linear-gradient(135deg, #fff8ee, #fff);
-      box-shadow: 0 4px 16px rgba(200,146,42,0.15);
+      box-shadow: 0 4px 16px rgba(200, 146, 42, 0.15);
     }
 
     /* Cards grid for combos */
@@ -242,7 +252,7 @@
 
     .combo-card:hover {
       transform: translateY(-12px);
-      box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
     }
 
     .combo-card img {
@@ -329,52 +339,118 @@
       border-radius: 20px;
       letter-spacing: 0.05em;
       text-transform: uppercase;
-      box-shadow: 0 4px 10px rgba(178,34,34,0.35);
+      box-shadow: 0 4px 10px rgba(178, 34, 34, 0.35);
     }
 
     /* ── Cart Button ── */
     .cart-btn {
-      position: fixed; bottom: 35px; right: 35px;
-      background: #2e7d32; color: white;
-      width: 78px; height: 78px; border-radius: 50%;
-      box-shadow: 0 8px 24px rgba(0,0,0,0.25);
-      display: flex; align-items: center; justify-content: center;
-      font-size: 2rem; z-index: 999;
+      position: fixed;
+      bottom: 35px;
+      right: 35px;
+      background: #2e7d32;
+      color: white;
+      width: 78px;
+      height: 78px;
+      border-radius: 50%;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2rem;
+      z-index: 999;
       transition: all 0.3s;
       text-decoration: none;
     }
 
-    .cart-btn:hover { transform: scale(1.12); }
+    .cart-btn:hover {
+      transform: scale(1.12);
+    }
 
     .cart-btn span {
-      position: absolute; top: -8px; right: -8px;
-      background: #d32f2f; color: white;
-      width: 32px; height: 32px; border-radius: 50%;
-      font-size: 1rem; line-height: 32px; text-align: center;
+      position: absolute;
+      top: -8px;
+      right: -8px;
+      background: #d32f2f;
+      color: white;
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      font-size: 1rem;
+      line-height: 32px;
+      text-align: center;
     }
 
     @media (max-width: 768px) {
-      .menu-page { padding: 90px 16px 80px; }
-      .menu-hero h1 { font-size: 2.8rem; }
-      .menu-grid { grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); }
-      .combo-grid { grid-template-columns: 1fr; }
-      .combo-section-banner h2 { font-size: 1.45rem; padding: 8px 18px; }
+      .menu-page {
+        padding: 90px 16px 80px;
+      }
+
+      .menu-hero h1 {
+        font-size: 2.8rem;
+      }
+
+      .menu-grid {
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      }
+
+      .combo-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .combo-section-banner h2 {
+        font-size: 1.45rem;
+        padding: 8px 18px;
+      }
+    }
+
+    /* Limited Badge - only for Weekend Thali */
+    .limited-badge {
+      position: absolute;
+      top: 16px;
+      right: 16px;
+      background: #28a745;
+      color: white;
+      font-size: 0.75rem;
+      font-weight: 700;
+      padding: 6px 14px;
+      border-radius: 20px;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      box-shadow: 0 4px 10px rgba(40, 167, 69, 0.35);
     }
   </style>
 </head>
+
 <body>
 
-<!-- NAVBAR -->
-<nav class="navbar">
-  <div class="nav-container">
-    <div class="logo">
-      <div></div>
-    </div>
-    <div class="logo">
-      <img src="assets/rasraj_logo.jpeg" alt="Rasraaj Logo" class="main-logo">
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <div class="logo">
+        <div></div>
+      </div>
+      <div class="logo">
+        <img src="assets/rasraj_logo.jpeg" alt="Rasraaj Logo" class="main-logo">
+      </div>
+
+      <div class="nav-links desktop-menu">
+        <a href="index.html">Home</a>
+        <a href="index.html#services">Services</a>
+        <a href="index.html#features">Features</a>
+        <a href="menu.html">Menu</a>
+        <a href="index.html#reviews">Reviews</a>
+        <a href="index.html#contact">Contact</a>
+      </div>
+
+      <a href="#contact" class="btn-book desktop-btn">Order Now</a>
+
+      <button id="hamburger" class="hamburger">
+        <i class="fa-solid fa-bars"></i>
+      </button>
     </div>
 
-    <div class="nav-links desktop-menu">
+    <div id="mobile-menu" class="mobile-menu">
+      <button id="close-menu" class="close-btn">✕</button>
       <a href="index.html">Home</a>
       <a href="index.html#services">Services</a>
       <a href="index.html#features">Features</a>
@@ -382,95 +458,78 @@
       <a href="index.html#reviews">Reviews</a>
       <a href="index.html#contact">Contact</a>
     </div>
-
-    <a href="#contact" class="btn-book desktop-btn">Order Now</a>
-
-    <button id="hamburger" class="hamburger">
-      <i class="fa-solid fa-bars"></i>
-    </button>
-  </div>
-
-  <div id="mobile-menu" class="mobile-menu">
-    <button id="close-menu" class="close-btn">✕</button>
-    <a href="index.html">Home</a>
-    <a href="index.html#services">Services</a>
-    <a href="index.html#features">Features</a>
-    <a href="menu.html">Menu</a>
-    <a href="index.html#reviews">Reviews</a>
-    <a href="index.html#contact">Contact</a>
-  </div>
-</nav>
+  </nav>
 
 
-<!-- Menu Content -->
-<section class="menu-page">
-  <div class="container">
-    <div class="menu-hero">
-      <h1>Our Menu</h1>
-      <p>Healthy, Tasty &amp; 100% Vegetarian Delight at Rasraaj Indian Cafe</p>
-      <p style="margin-top:12px; color:#444; font-size:1.05rem;">
-        Call for Delivery / Order: <strong>(925)-828-2133</strong>
-      </p>
-    </div>
-
-    <div class="filters" id="filters"></div>
-
-    <!-- Regular menu grid (all categories except Combos) -->
-    <div class="menu-grid" id="menuGrid"></div>
-
-    <!-- ── COMBOS SPECIAL SECTION ── -->
-    <div id="combos-section">
-
-      <!-- Sub-section 1: Daily Special Thali -->
-      <div class="combo-section-banner">
-        <div class="banner-line"></div>
-        <h2>🍽️ Daily Special Thali</h2>
-        <div class="banner-line"></div>
+  <!-- Menu Content -->
+  <section class="menu-page">
+    <div class="container">
+      <div class="menu-hero">
+        <h1>Our Menu</h1>
+        <p>Healthy, Tasty &amp; 100% Vegetarian Delight at Rasraaj Indian Cafe</p>
+        <p style="margin-top:12px; color:#444; font-size:1.05rem;">
+          Call for Delivery / Order: <strong>(925)-828-2133</strong>
+        </p>
       </div>
-      <div class="combo-grid" id="dailySpecialGrid"></div>
 
-      <!-- Sub-section 2: Unlimited Weekend Thali -->
-      <div class="combo-section-banner" style="margin-top:60px;">
-        <div class="banner-line"></div>
-        <h2>✨ Unlimited Weekend Thali</h2>
-        <div class="banner-line"></div>
+      <div class="filters" id="filters"></div>
+
+      <!-- Regular menu grid (all categories except Combos) -->
+      <div class="menu-grid" id="menuGrid"></div>
+
+      <!-- ── COMBOS SPECIAL SECTION ── -->
+      <div id="combos-section">
+
+        <!-- Sub-section 1: Daily Special Thali -->
+        <div class="combo-section-banner">
+          <div class="banner-line"></div>
+          <h2>🍽️ Daily Special Thali</h2>
+          <div class="banner-line"></div>
+        </div>
+        <div class="combo-grid" id="dailySpecialGrid"></div>
+
+        <!-- Sub-section 2: Unlimited Weekend Thali -->
+        <div class="combo-section-banner" style="margin-top:60px;">
+          <div class="banner-line"></div>
+          <h2>✨ Unlimited Weekend Thali</h2>
+          <div class="banner-line"></div>
+        </div>
+        <div class="combo-grid" id="weekendUnlimitedGrid"></div>
+
       </div>
-      <div class="combo-grid" id="weekendUnlimitedGrid"></div>
-
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- Floating Cart -->
-<a href="cart.html" class="cart-btn" title="View Cart">
-  <i class="fa-solid fa-cart-shopping"></i>
-  <span id="cart-count">0</span>
-</a>
+  <!-- Floating Cart -->
+  <a href="cart.html" class="cart-btn" title="View Cart">
+    <i class="fa-solid fa-cart-shopping"></i>
+    <span id="cart-count">0</span>
+  </a>
 
-<script src="menudata.js"></script>
+  <script src="menudata.js"></script>
 
-<script>
-// ── Build filter buttons (skip "Combos" from menuItems since it's handled separately) ──
-const filtersDiv = document.getElementById('filters');
-const uniqueCategories = ['all', ...new Set(menuItems.map(item => item.category)), 'Combos'];
+  <script>
+    // Filter buttons
+    const filtersDiv = document.getElementById('filters');
+    const uniqueCategories = ['all', ...new Set(menuItems.map(item => item.category)), 'Combos'];
 
-uniqueCategories.forEach(cat => {
-  const btn = document.createElement('button');
-  btn.className = 'filter-btn' + (cat === 'all' ? ' active' : '');
-  btn.dataset.filter = cat;
-  btn.textContent = cat === 'all' ? 'All' : cat.split('-').map(w => w[0].toUpperCase() + w.slice(1)).join(' ');
-  filtersDiv.appendChild(btn);
-});
+    uniqueCategories.forEach(cat => {
+      const btn = document.createElement('button');
+      btn.className = 'filter-btn' + (cat === 'all' ? ' active' : '');
+      btn.dataset.filter = cat;
+      btn.textContent = cat === 'all' ? 'All' : cat.split('-').map(w => w[0].toUpperCase() + w.slice(1)).join(' ');
+      filtersDiv.appendChild(btn);
+    });
 
-// ── Render regular menu cards (no Combos here) ──
-const grid = document.getElementById('menuGrid');
-const cardsByCategory = {};
+    // Regular menu cards
+    const grid = document.getElementById('menuGrid');
+    const cardsByCategory = {};
 
-menuItems.forEach(item => {
-  const card = document.createElement('div');
-  card.className = 'menu-card show';
-  card.dataset.category = item.category;
-  card.innerHTML = `
+    menuItems.forEach(item => {
+      const card = document.createElement('div');
+      card.className = 'menu-card show';
+      card.dataset.category = item.category;
+      card.innerHTML = `
     <img src="${item.img}" alt="${item.name}" onerror="this.src='https://via.placeholder.com/360x280?text=${encodeURIComponent(item.name)}'">
     <div class="menu-info">
       <h3>${item.name}</h3>
@@ -483,20 +542,34 @@ menuItems.forEach(item => {
       <button class="add-to-cart">Add to Cart</button>
     </div>
   `;
-  grid.appendChild(card);
+      grid.appendChild(card);
 
-  if (!cardsByCategory[item.category]) cardsByCategory[item.category] = [];
-  cardsByCategory[item.category].push(card);
-});
+      if (!cardsByCategory[item.category]) cardsByCategory[item.category] = [];
+      cardsByCategory[item.category].push(card);
+    });
 
-// ── Render Combo Cards ──
-function renderComboCards(combos, containerId, isUnlimited = false) {
-  const container = document.getElementById(containerId);
-  combos.forEach(combo => {
-    const card = document.createElement('div');
-    card.className = 'combo-card' + (isUnlimited ? ' unlimited' : '');
-    card.innerHTML = `
-      ${isUnlimited ? '<div class="unlimited-badge">🌟 Unlimited</div>' : ''}
+    // ── Combo Cards with Specific Badges ──
+    function renderComboCards(combos, containerId) {
+      const container = document.getElementById(containerId);
+
+      combos.forEach(combo => {
+        const card = document.createElement('div');
+        let badgeHTML = '';
+
+        if (combo.name === "Weekend Unlimited Thali") {
+          badgeHTML = '<div class="unlimited-badge">🌟 Unlimited</div>';
+          card.className = 'combo-card unlimited';
+        }
+        else if (combo.name === "Weekend Thali") {
+          badgeHTML = '<div class="limited-badge">📌 Limited</div>';
+          card.className = 'combo-card';
+        }
+        else {
+          card.className = 'combo-card';
+        }
+
+        card.innerHTML = `
+      ${badgeHTML}
       <img src="${combo.img}" alt="${combo.name}"
            onerror="this.src='https://via.placeholder.com/360x280?text=${encodeURIComponent(combo.name)}'">
       <div class="combo-info">
@@ -512,176 +585,171 @@ function renderComboCards(combos, containerId, isUnlimited = false) {
         <button class="add-to-cart" data-name="${combo.name}" data-price="${combo.price}">Add to Cart</button>
       </div>
     `;
-    container.appendChild(card);
-  });
-}
-
-renderComboCards(comboOffers.dailySpecial, 'dailySpecialGrid', false);
-renderComboCards(comboOffers.weekendUnlimited, 'weekendUnlimitedGrid', true);
-
-// ── Quantity controls (delegated — works for both grids) ──
-document.addEventListener('click', e => {
-  const t = e.target;
-  if (t.classList.contains('minus')) {
-    const inp = t.parentElement.querySelector('.quantity');
-    if (inp.value > 1) inp.value--;
-  }
-  if (t.classList.contains('plus')) {
-    const inp = t.parentElement.querySelector('.quantity');
-    inp.value = Number(inp.value) + 1;
-  }
-});
-
-// ── Filter logic ──
-let timeout;
-filtersDiv.addEventListener('click', e => {
-  if (!e.target.classList.contains('filter-btn')) return;
-
-  clearTimeout(timeout);
-  timeout = setTimeout(() => {
-    document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
-    e.target.classList.add('active');
-
-    const filter = e.target.dataset.filter;
-    const showAll = filter === 'all';
-    const showCombos = showAll || filter === 'Combos';
-    const showRegular = filter !== 'Combos';
-
-    // Toggle combos section
-    const combosSection = document.getElementById('combos-section');
-    combosSection.classList.toggle('show', showCombos);
-
-    // Toggle regular grid visibility
-    grid.style.display = (showRegular) ? '' : 'none';
-
-    if (showRegular) {
-      Object.keys(cardsByCategory).forEach(cat => {
-        const show = showAll || cat === filter;
-        cardsByCategory[cat].forEach(card => {
-          if (show) {
-            card.style.display = '';
-            requestAnimationFrame(() => {
-              requestAnimationFrame(() => card.classList.add('show'));
-            });
-          } else {
-            card.classList.remove('show');
-            setTimeout(() => {
-              if (!card.classList.contains('show')) card.style.display = 'none';
-            }, 450);
-          }
-        });
+        container.appendChild(card);
       });
     }
-  }, 60);
-});
 
-// Show combos section when "All" is active on load
-document.getElementById('combos-section').classList.add('show');
+    // Render combos
+    renderComboCards(comboOffers.dailySpecial, 'dailySpecialGrid');
+    renderComboCards(comboOffers.weekendUnlimited, 'weekendUnlimitedGrid');
 
-// ── Cart logic ──
-let cart = JSON.parse(localStorage.getItem('cart')) || [];
+    // Quantity controls
+    document.addEventListener('click', e => {
+      if (e.target.classList.contains('minus')) {
+        const inp = e.target.parentElement.querySelector('.quantity');
+        if (inp.value > 1) inp.value--;
+      }
+      if (e.target.classList.contains('plus')) {
+        const inp = e.target.parentElement.querySelector('.quantity');
+        inp.value = Number(inp.value) + 1;
+      }
+    });
 
-function updateCartCount() {
-  const total = cart.reduce((sum, i) => sum + i.quantity, 0);
-  document.getElementById('cart-count').textContent = total;
-}
+    // Filter logic
+    let timeout;
+    filtersDiv.addEventListener('click', e => {
+      if (!e.target.classList.contains('filter-btn')) return;
 
-// Regular menu add-to-cart
-grid.addEventListener('click', e => {
-  if (!e.target.classList.contains('add-to-cart')) return;
-  const card = e.target.closest('.menu-card');
-  const name = card.querySelector('h3').textContent;
-  const price = parseFloat(card.querySelector('.price').textContent.replace('$',''));
-  const qty = parseInt(card.querySelector('.quantity').value) || 1;
-  let item = cart.find(i => i.name === name);
-  if (item) item.quantity += qty;
-  else cart.push({ name, price, quantity: qty });
-  localStorage.setItem('cart', JSON.stringify(cart));
-  updateCartCount();
-  alert(`${qty} × ${name} added to cart!`);
-});
+      clearTimeout(timeout);
+      timeout = setTimeout(() => {
+        document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+        e.target.classList.add('active');
 
-// Combo add-to-cart
-document.getElementById('combos-section').addEventListener('click', e => {
-  if (!e.target.classList.contains('add-to-cart')) return;
-  const name = e.target.dataset.name;
-  const price = parseFloat(e.target.dataset.price);
-  const qty = parseInt(e.target.closest('.combo-info').querySelector('.quantity').value) || 1;
-  let item = cart.find(i => i.name === name);
-  if (item) item.quantity += qty;
-  else cart.push({ name, price, quantity: qty });
-  localStorage.setItem('cart', JSON.stringify(cart));
-  updateCartCount();
-  alert(`${qty} × ${name} added to cart!`);
-});
+        const filter = e.target.dataset.filter;
+        const showAll = filter === 'all';
+        const showCombos = showAll || filter === 'Combos';
+        const showRegular = filter !== 'Combos';
 
-updateCartCount();
-</script>
+        document.getElementById('combos-section').classList.toggle('show', showCombos);
+        grid.style.display = showRegular ? '' : 'none';
 
-<!--  footer  -->
-<hr style="border: 3px solid black; margin-top: -20px;">
-<div class="footer-bottom"></div>
+        if (showRegular) {
+          Object.keys(cardsByCategory).forEach(cat => {
+            const show = showAll || cat === filter;
+            cardsByCategory[cat].forEach(card => {
+              if (show) {
+                card.style.display = '';
+                requestAnimationFrame(() => card.classList.add('show'));
+              } else {
+                card.classList.remove('show');
+                setTimeout(() => card.style.display = 'none', 450);
+              }
+            });
+          });
+        }
+      }, 60);
+    });
 
-<footer>
-  <div class="footer-container">
-    <div class="footer-column">
-      <div class="footer-logo">
-        <img src="assets/rasraj_logo.jpeg" alt="Rasraaj Logo" class="main-logo">
+    document.getElementById('combos-section').classList.add('show');
+
+    // Cart logic
+    let cart = JSON.parse(localStorage.getItem('cart')) || [];
+
+    function updateCartCount() {
+      const total = cart.reduce((sum, i) => sum + i.quantity, 0);
+      document.getElementById('cart-count').textContent = total;
+    }
+
+    grid.addEventListener('click', e => {
+      if (!e.target.classList.contains('add-to-cart')) return;
+      const card = e.target.closest('.menu-card');
+      const name = card.querySelector('h3').textContent;
+      const price = parseFloat(card.querySelector('.price').textContent.replace('$', ''));
+      const qty = parseInt(card.querySelector('.quantity').value) || 1;
+
+      let item = cart.find(i => i.name === name);
+      if (item) item.quantity += qty;
+      else cart.push({ name, price, quantity: qty });
+
+      localStorage.setItem('cart', JSON.stringify(cart));
+      updateCartCount();
+      alert(`${qty} × ${name} added to cart!`);
+    });
+
+    document.getElementById('combos-section').addEventListener('click', e => {
+      if (!e.target.classList.contains('add-to-cart')) return;
+      const name = e.target.dataset.name;
+      const price = parseFloat(e.target.dataset.price);
+      const qty = parseInt(e.target.closest('.combo-info').querySelector('.quantity').value) || 1;
+
+      let item = cart.find(i => i.name === name);
+      if (item) item.quantity += qty;
+      else cart.push({ name, price, quantity: qty });
+
+      localStorage.setItem('cart', JSON.stringify(cart));
+      updateCartCount();
+      alert(`${qty} × ${name} added to cart!`);
+    });
+
+    updateCartCount();
+  </script>
+
+  <!--  footer  -->
+  <hr style="border: 3px solid black; margin-top: -20px;">
+  <div class="footer-bottom"></div>
+
+  <footer>
+    <div class="footer-container">
+      <div class="footer-column">
+        <div class="footer-logo">
+          <img src="assets/rasraj_logo.jpeg" alt="Rasraaj Logo" class="main-logo">
+        </div>
+        <p>
+          Discover a world of delicious flavors made with love and the finest ingredients. From traditional favorites to
+          modern delights, every bite is crafted to satisfy your cravings.
+        </p>
+        <div class="social-icons">
+          <a href="https://facebook.com/ragamflavors" target="_blank" aria-label="Facebook" class="social-link">
+            <i class="fab fa-facebook-f"></i>
+          </a>
+          <a href="https://instagram.com/ragamflavors" target="_blank" aria-label="Instagram" class="social-link">
+            <i class="fab fa-instagram"></i>
+          </a>
+          <a href="https://twitter.com/ragamflavors" target="_blank" aria-label="Twitter" class="social-link">
+            <i class="fab fa-x-twitter"></i>
+          </a>
+          <a href="https://linkedin.com/company/ragamflavors" target="_blank" aria-label="LinkedIn" class="social-link">
+            <i class="fab fa-linkedin-in"></i>
+          </a>
+        </div>
       </div>
+
+      <div class="footer-column">
+        <h3>Quick Links</h3>
+        <ul class="footer-links">
+          <li><a href="">Home</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#features">Features</a></li>
+          <li><a href="menu.html">Menu</a></li>
+          <li><a href="#gallery">Gallery</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-column">
+        <h3>Contact Info</h3>
+        <ul class="footer-contact">
+          <li><i class="fa-solid fa-location-dot"></i> 7375 Amador valley blvd ,<br> Dublin , CA , 94568 </li>
+          <li><i class="fa-solid fa-phone-volume"></i> +1 (925)-828-2133</li>
+          <li><i class="fa-solid fa-envelope"></i> Rasraajindiancafe@gmail.com</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
       <p>
-        Discover a world of delicious flavors made with love and the finest ingredients. From traditional favorites to modern delights, every bite is crafted to satisfy your cravings.
+        Powered by
+        <a href="https://www.risingstech.com" target="_blank">Risings Tech</a>
+        ©2026 All Rights Reserved.
       </p>
-      <div class="social-icons">
-        <a href="https://facebook.com/ragamflavors" target="_blank" aria-label="Facebook" class="social-link">
-          <i class="fab fa-facebook-f"></i>
-        </a>
-        <a href="https://instagram.com/ragamflavors" target="_blank" aria-label="Instagram" class="social-link">
-          <i class="fab fa-instagram"></i>
-        </a>
-        <a href="https://twitter.com/ragamflavors" target="_blank" aria-label="Twitter" class="social-link">
-          <i class="fab fa-x-twitter"></i>
-        </a>
-        <a href="https://linkedin.com/company/ragamflavors" target="_blank" aria-label="LinkedIn" class="social-link">
-          <i class="fab fa-linkedin-in"></i>
-        </a>
-      </div>
     </div>
 
-    <div class="footer-column">
-      <h3>Quick Links</h3>
-      <ul class="footer-links">
-        <li><a href="">Home</a></li>
-        <li><a href="#services">Services</a></li>
-        <li><a href="#features">Features</a></li>
-        <li><a href="menu.html">Menu</a></li>
-        <li><a href="#gallery">Gallery</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </div>
+    <button id="back-to-top" class="back-to-top" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">
+      <i class="fa-solid fa-arrow-up"></i>
+    </button>
+  </footer>
 
-    <div class="footer-column">
-      <h3>Contact Info</h3>
-      <ul class="footer-contact">
-        <li><i class="fa-solid fa-location-dot"></i> 7375 Amador valley blvd ,<br> Dublin , CA , 94568 </li>
-        <li><i class="fa-solid fa-phone-volume"></i> +1 (925)-828-2133</li>
-        <li><i class="fa-solid fa-envelope"></i> Rasraajindiancafe@gmail.com</li>
-      </ul>
-    </div>
-  </div>
-
-  <div class="footer-bottom">
-    <p>
-      Powered by
-      <a href="https://www.risingstech.com" target="_blank">Risings Tech</a>
-      ©2026 All Rights Reserved.
-    </p>
-  </div>
-
-  <button id="back-to-top" class="back-to-top" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">
-    <i class="fa-solid fa-arrow-up"></i>
-  </button>
-</footer>
-
-<script src="script.js"></script>
+  <script src="script.js"></script>
 </body>
+
 </html>
